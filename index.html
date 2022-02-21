@@ -4,45 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Momentum App</title>
-    <link rel="stylesheet" href="./style2.css" />
+    <title>Momentum</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <section id="bg">
-      <div class="wrapper">
-        <h2 id="clock">00:00:00</h2>
-        <h1 id="greeting" class="hidden"></h1>
-        <form id="login-form" class="hidden">
-          <input
-            required
-            maxlength="15"
-            type="text"
-            placeholder="Hi, What is your name?"
-          />
-        </form>
+    <div class="before-login">
+      <h2>Hello, What is your name?</h2>
+      <form class="before-login" autocomplete="off">
+        <input id="username" type="text" maxlength="15" required />
+      </form>
+    </div>
+
+    <div class="after-login visually-hidden">
+      <h2 id="clock">00:00:00</h2>
+      <h3 id="greeting">Good evening, Summer.</h3>
+
+      <form id="focus" autocomplete="off">
+        <h3 class="focus-question">What is your main focus for today?</h3>
+        <input id="focus-input" type="text" required />
+      </form>
+      <div class="today-focus visually-hidden">
+        <h3 class="title">TODAY</h3>
+        <div class="focus-wrap"></div>
       </div>
-      <div class="todo">
-        <ul id="todo-list"></ul>
-        <form id="todo-form">
-          <input type="text" placeholder="To Do" required />
+    </div>
+
+    <div id="quotes">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="todos">
+      <div class="todos-wrapper showTodo">
+        <ul class="todo-list"></ul>
+
+        <form>
+          <input type="text" placeholder="New todo" />
         </form>
       </div>
 
-      <div id="quotes">
-        <span></span>
-        <span></span>
-      </div>
-      <div id="weather">
-        <span></span>
-        <span></span>
-      </div>
-    </section>
-    <div class="overlay"></div>
-    <script src="./js/greeting.js"></script>
+      <button class="todo-button">ToDo</button>
+    </div>
+
+    <script src="./js/login.js"></script>
+    <script src="./js/focus.js"></script>
     <script src="./js/clock.js"></script>
-    <script src="./js/quotes.js"></script>
-    <script src="./js/background.js"></script>
     <script src="./js/todo.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/quotes.js"></script>
     <script src="./js/geolocation.js"></script>
   </body>
 </html>

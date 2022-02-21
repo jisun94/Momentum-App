@@ -1,80 +1,193 @@
-.hidden {
-  display: none;
-}
-
 * {
   margin: 0;
-  color: white;
   text-align: center;
+  box-sizing: border-box;
 }
 
-img {
-  display: none;
-}
-
-input {
-  all: unset;
-}
-
-input::placeholder {
-  color: white;
-}
-
-#bg {
-  position: relative;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
-  background-size: cover;
+  color: white;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.wrapper {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
+ul {
+  list-style: none;
 }
 
-#clock {
-  font-size: 120px;
-}
-#greeting {
-  font-size: 50px;
-}
-
-#login-form input {
-  font-size: 70px;
-  border-bottom: 1px solid white;
-}
-
-#todo-form {
-  position: fixed;
-  right: 100px;
-  bottom: 200px;
-}
-
-#todo-list {
-}
-#todo-list li {
-}
-#todo-list li span {
-  margin-right: 20px;
-}
-#todo-list li button {
+button,
+input {
   all: unset;
 }
 
-#quotes {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 30px;
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.before-login {
+  width: 650px;
+}
+
+.before-login h2 {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.before-login input {
+  max-width: 450px;
+  border-bottom: 1px solid white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.after-login #clock {
+  font-size: 120px;
+}
+.after-login #greeting {
+  margin-bottom: 55px;
+  font-size: 40px;
+}
+.after-login .focus-question {
+  margin-bottom: 8px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.after-login #focus-input {
+  width: 400px;
+  border-bottom: 1px solid white;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.focus-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.focus-wrap p {
+  font-size: 35px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.focus-wrap button {
+  position: relative;
+  top: 5px;
+
+  font-size: 25px;
 }
 
 #weather {
   position: fixed;
-  right: 30px;
   top: 30px;
+  right: 50px;
+}
+#quotes {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#todos {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 300px;
+  overflow: hidden;
+  color: #333;
+  border-radius: 6px 6px 0 0;
+}
+
+#todos .todos-wrapper {
+  position: relative;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+}
+
+#todos .todos-wrapper::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  right: 15px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid #fff;
+}
+
+#todos .todos-wrapper.showTodo {
+  opacity: 1;
+}
+
+#todos form {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 6px 6px;
+  background-color: #fff;
+}
+
+#todos input {
+  width: 100%;
+  font-size: 18px;
+  margin: 5px 0;
+  padding: 0 20px;
+  text-align: left;
+  font-weight: 200;
+  box-sizing: border-box;
+}
+
+#todos .todo-list {
+  max-width: 300px;
+  max-height: 300px;
+  padding-left: 0;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+#todos .todo-list::-webkit-scrollbar {
+  display: none;
+}
+
+#todos .todo-list li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 45px 10px 20px;
+}
+
+#todos .todo-list li button {
+  position: absolute;
+  right: 20px;
+}
+
+#todos .todo-list span {
+  display: inline-block;
+  text-align: left;
+  font-size: 18px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#todos .todo-button {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 500;
 }

@@ -2,14 +2,9 @@
 
 const quotes = [
   {
-    quote: 'Chocolate is made from beans so chocolate is a vegetable ',
-  },
-  {
     quote: 'Fake it until you make it',
   },
-  {
-    quote: 'Having dinner with family is the easiest way to be happy',
-  },
+
   {
     quote:
       '“All our dreams can come true, if we have the courage to pursue them.”',

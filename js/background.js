@@ -1,10 +1,16 @@
 'use strict';
 
-const images = ['img1.png', 'img2.png', 'img3.png'];
+const bgImages = [
+  'img1.png',
+  'img2.png',
+  'img3.png',
+  'img4.png',
+  'img5.png',
+  'img6.png',
+];
 
-const randomBg = images[Math.floor(Math.random() * images.length)];
+const randomBg = bgImages[Math.floor(Math.random() * bgImages.length)];
 
 const url = `url(./image/${randomBg})`;
 
-const bg = document.querySelector('#bg');
-bg.style.backgroundImage = url;
+document.body.style.backgroundImage = url;
