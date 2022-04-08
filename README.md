@@ -1,4 +1,4 @@
-## Momentum App is a web application which helps you to increase your focus.
+## Momentum App is a web application which helps to increase your focus.
 
 
 How to use 🖱️😊
